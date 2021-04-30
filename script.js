@@ -9,27 +9,27 @@ let computerPlay = function () {
 
 let roundOne = function (playerSelection, computerSelection) {
 if (playerSelection === computerSelection) {
-return "It's tie you bitches!"
+return "It's tie!"
 }
    else if (playerSelection === "rock" && computerSelection === "scissor") {
-       return "You win bitch!"
+       return "You win!"
    }  else if (computerSelection === "rock" && playerSelection === "scissor") {
-       return "You lose bitch! rock beat scissor"
+       return "You lose! rock beat scissor"
    } else if (playerSelection === "scissor" && computerSelection === "paper") {
-       return "you win bitch! scissor beat paper"
+       return "you win!r"
    } else if (computerSelection === "scissor" && playerSelection === "paper") {
-       return "you lose amigo! scissor beat paper"
+       return "you lose! scissor beat paper"
    } else if (playerSelection === "paper" && computerSelection === "rock") {
-       return "you win bitch! paper cover the rock"
+       return "you win!"
    } else if (computerSelection === "paper" && playerSelection === "rock") {
-       return "you lose fucker! paper beat rock"
+       return "you lose! paper beat rock"
    }
 }
 
 
 
 
-const playerSelection = prompt("choose wisely")
+const playerSelection = prompt("choose rock, paper or scissor")
 computerSelection = computerPlay()
 
 console.log(roundOne(playerSelection, computerSelection));
