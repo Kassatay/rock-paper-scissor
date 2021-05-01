@@ -11,8 +11,8 @@ let computerScore = 0;
 
 let roundOne = function (playerSelection, computerSelection) {
 if (playerSelection === computerSelection) {
-alert("It's a tie!!")
-}else if (playerSelection === "rock" && computerSelection === "scissor") {
+    alert("It's a tie!!")
+}  else if (playerSelection === "rock" && computerSelection === "scissor") {
        alert("You win! rock beat scissor!");
        userScore++;
    }  else if (computerSelection === "rock" && playerSelection === "scissor") {
@@ -24,7 +24,7 @@ alert("It's a tie!!")
    } else if (computerSelection === "scissor" && playerSelection === "paper") {
    alert("you lose! scissor beat paper");
   computerScore++;
-   } else if (playerSelection === "paper" && playerSelection === "rock") {
+   } else if (playerSelection === "paper" && computerSelection === "rock") {
     alert("You win! Paper beat rock") 
    userScore++;
    } else if (computerSelection === "paper" && playerSelection === "rock") {
@@ -33,19 +33,29 @@ alert("It's a tie!!")
    } else {
        alert("incorrect reply")
    }
-   console.log(userScore, computerScore)
    
 }
 
+let gamePlay = function () {
+    for (i = 0; i < 5;i++ ) {
+        const playerSelection = prompt("Choose rock, paper or scissor..").toLowerCase();
+    const computerSelection = computerPlay();
+        roundOne(playerSelection, computerSelection);
+    }
+    if (userScore > computerScore) {
+        alert(`You win! your score is: ${userScore} and computer score is: ${computerScore}`)
+    } else if (userScore < computerScore) {
+        alert(`You lost! your socre is: ${userScore} and computer score is: ${computerScore}`)
+    } else {
+        alert(`It's a tie! your socre is: ${userScore} and computer score is: ${computerScore}`)
+    }
+}
+
+
+gamePlay()
 
 
 
-
-
-const playerSelection = prompt("choose rock, paper or scissor")
-computerSelection = computerPlay()
-
-console.log(roundOne(playerSelection, computerSelection));
 
 
 
