@@ -31,7 +31,7 @@ if (playerSelection === computerSelection) {
        alert ("You lose! Paper beat rock")
        computerScore++;
    } else {
-       alert("incorrect reply")
+       alert("incorrect reply, please type rock, paper or scissor")
    }
    
 }
@@ -45,9 +45,9 @@ let gamePlay = function () {
     if (userScore > computerScore) {
         alert(`You win! your score is: ${userScore} and computer score is: ${computerScore}`)
     } else if (userScore < computerScore) {
-        alert(`You lost! your socre is: ${userScore} and computer score is: ${computerScore}`)
+        alert(`You lost! your score is: ${userScore} and computer score is: ${computerScore}`)
     } else {
-        alert(`It's a tie! your socre is: ${userScore} and computer score is: ${computerScore}`)
+        alert(`It's a tie! your score is: ${userScore} and computer score is: ${computerScore}`)
     }
 }
 
